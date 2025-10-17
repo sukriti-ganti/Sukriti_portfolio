@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container nav">
       <a href="#" class="logo">Sukriti<span class="brand-gradient">.ece</span></a>
@@ -25,7 +26,7 @@
       </nav>
       <div class="mobile">
         <button class="theme-toggle" id="themeToggleSm" aria-label="Toggle theme">☾</button>
-        <button class="btn" id="menuBtn">☰</button>
+        <button class="btn" id="menuBtn" aria-expanded="false" aria-controls="mobile-links">☰</button>
       </div>
     </div>
   </header>
@@ -65,7 +66,6 @@
       <div class="container">
         <div class="section-title">
           <h2>About</h2>
-          <span class="chip">Core ECE • R&D Mindset</span>
         </div>
         <div class="about">
           <article class="card">
@@ -83,6 +83,14 @@
             </ul>
           </article>
           <aside class="card">
+            <h3>Quick Facts</h3>
+            <ul style="margin:0;padding-left:18px">
+              <li>EPICS lead: <em>Smart Helmet for Mining Safety</em></li>
+              <li>Stacks: STM32, Raspberry Pi 2/4, ESP32</li>
+              <li>Tooling: MCU 8051 IDE, Keil, MATLAB, LTspice, KiCad</li>
+              <li>Soft skills: technical writing, team leadership</li>
+            </ul>
+            <div style="display:flex;gap:10px;margin-top:12px">
               <a class="btn" href="#timeline">Academic Journey →</a>
               <a class="btn" href="#contact">Mentor Me →</a>
             </div>
@@ -138,16 +146,14 @@
       <div class="container">
         <div class="section-title">
           <h2>Projects</h2>
-          <div class="filters" role="tablist" aria-label="Project filters">
-            <button class="chip" data-filter="all">All</button>
-            <button class="chip" data-filter="hardware">Hardware</button>
-            <button class="chip" data-filter="embedded">Embedded</button>
-            <button class="chip" data-filter="ai">AI/ML</button>
+          <div class="filters" role="tablist" aria-label="Project filters" id="filters">
+            <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="hardware">Hardware</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="embedded">Embedded</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="ai">AI/ML</button>
           </div>
         </div>
-        <div class="grid projects" id="projectGrid">
-          <!-- Project Cards (Smart Helmet, Silent SOS, etc.) -->
-        </div>
+        <div class="grid projects" id="projectGrid"></div>
       </div>
     </section>
 
@@ -187,8 +193,8 @@
           </form>
           <aside class="card">
             <h3>Elsewhere</h3>
-            <p>Email: <a href="mailto:sukriti.ganti.12@gmail.com">sukriti.ganti.12@gmail.com</a><br/>
-              GitHub: <a href="#">github.com/sukriti-ganti</a><br/>
+            <p>Email: <a href="mailto:sukriti@example.com">sukriti@example.com</a><br/>
+              GitHub: <a href="#">github.com/sukriti-g</a><br/>
               LinkedIn: <a href="#">linkedin.com/in/sukriti</a>
             </p>
             <p class="chip">Resume available on request</p>
@@ -198,6 +204,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       © <span id="year"></span> Sukriti — Built with curiosity. <span class="brand-gradient">ECE × R&D</span>
