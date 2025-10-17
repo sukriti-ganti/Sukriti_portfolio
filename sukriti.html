@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sukriti | ECE R&D Portfolio</title>
+  <meta name="description" content="ECE R&D portfolio: embedded systems, signal processing, AI/ML, and electronics design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">Sukriti<span class="brand-gradient">.ece</span></a>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#" id="downloadResume">Resume ⤓</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☾</button>
+      </nav>
+      <div class="mobile">
+        <button class="theme-toggle" id="themeToggleSm" aria-label="Toggle theme">☾</button>
+        <button class="btn" id="menuBtn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="container hero" id="home">
+      <div>
+        <div class="chip">ECE • Embedded • AI/ML • Signal Processing • PCB</div>
+        <h1 class="title">Building <span class="brand-gradient">human-safe</span> electronics & intelligent systems.</h1>
+        <p>
+          I’m <strong>Sukriti</strong>, a second-year ECE undergrad passionate about hardware R&D: embedded controllers, signal processing,
+          and applied AI. I design reliable electronics, write clean firmware, and validate systems with math and measurement.
+        </p>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a class="btn brand" href="#projects">Explore Projects</a>
+          <a class="btn" href="#contact">Let’s Collaborate</a>
+        </div>
+        <div class="kpis">
+          <div class="k"><div class="n">10+ </div><div class="t">Lab/Skilling Experiments</div></div>
+          <div class="k"><div class="n">5 </div><div class="t">PBL Projects</div></div>
+          <div class="k"><div class="n">3 </div><div class="t">Toolchains (STM32, Pi, 8051)</div></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img alt="Electronics waveform and PCB abstract" src="https://images.unsplash.com/photo-1555617117-08eaa1b7a47b?q=80&w=1200&auto=format&fit=crop" style="border-radius:14px;aspect-ratio:16/11;object-fit:cover" />
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px">
+          <div class="chip">C/C++ · ARM</div>
+          <div class="chip">MATLAB · DSP</div>
+          <div class="chip">KiCad · EasyEDA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About</h2>
+          <span class="chip">Core ECE • R&D Mindset</span>
+        </div>
+        <div class="about">
+          <article class="card">
+            <h3>Who am I?</h3>
+            <p>
+              An ECE learner with a builder’s bias: I explore signals, randomness, and real-time control to craft systems that are safe,
+              power-aware, and field-deployable. I use the <em>Feynman Technique</em>—teach concepts back to confirm mastery—and turn theory
+              from <span class="brand-gradient">RVSP/SCS/AECD/ESD/P&C</span> into prototypes.
+            </p>
+            <ul>
+              <li>📡 <strong>Signals & Comms:</strong> Fourier/filters → sensing & telemetry</li>
+              <li>🧮 <strong>Random Processes:</strong> noise models, estimators, reliability</li>
+              <li>⚙️ <strong>Processors & Controllers:</strong> 8086/8051 → STM32 ARM</li>
+              <li>🔩 <strong>AECD/ESD:</strong> op-amp design, PCB rules, EMI/grounding</li>
+            </ul>
+          </article>
+          <aside class="card">
+              <a class="btn" href="#timeline">Academic Journey →</a>
+              <a class="btn" href="#contact">Mentor Me →</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <span class="chip">Always learning</span>
+        </div>
+        <div class="grid skills">
+          <div class="card">
+            <h3>Hardware & ESD</h3>
+            <div class="skill-list">
+              <span class="chip">Schematic & PCB</span>
+              <span class="chip">Op-amp circuits</span>
+              <span class="chip">Power & LDOs</span>
+              <span class="chip">Sensors/Actuators</span>
+              <span class="chip">IPC rules • DRC</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Embedded & DSP</h3>
+            <div class="skill-list">
+              <span class="chip">C/C++ • CMSIS</span>
+              <span class="chip">UART/I2C/SPI</span>
+              <span class="chip">RT scheduling</span>
+              <span class="chip">Filtering</span>
+              <span class="chip">FFT • PSD</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>AI/ML & Software</h3>
+            <div class="skill-list">
+              <span class="chip">Python • NumPy</span>
+              <span class="chip">Scikit-learn</span>
+              <span class="chip">MATLAB</span>
+              <span class="chip">Git/GitHub</span>
+              <span class="chip">Linux • Bash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <div class="filters" role="tablist" aria-label="Project filters">
+            <button class="chip" data-filter="all">All</button>
+            <button class="chip" data-filter="hardware">Hardware</button>
+            <button class="chip" data-filter="embedded">Embedded</button>
+            <button class="chip" data-filter="ai">AI/ML</button>
+          </div>
+        </div>
+        <div class="grid projects" id="projectGrid">
+          <!-- Project Cards (Smart Helmet, Silent SOS, etc.) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <div class="container">
+        <div class="section-title">
+          <h2>Timeline</h2>
+          <span class="chip">Learning by building</span>
+        </div>
+        <div class="card">
+          <div class="timeline">
+            <div class="t-item"><h4>2025 — Started 2nd Year ECE</h4><p>Deep dive: RVSP, SCS, AECD, ESD, Processors & Controllers.</p></div>
+            <div class="t-item"><h4>2025 — EPICS: Smart Helmet Lead</h4><p>Team coordination, embedded proto, serial telemetry demo.</p></div>
+            <div class="t-item"><h4>2025 — AIML Lab Record & Skill Exams</h4><p>Python + MATLAB projects and viva prep artifacts.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <span class="chip">Open to R&D internships & collaborations</span>
+        </div>
+        <div class="contact-grid">
+          <form id="contactForm">
+            <input required name="name" placeholder="Your name" />
+            <input required type="email" name="email" placeholder="Your email" />
+            <textarea required name="message" placeholder="Tell me about the project…"></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn brand" type="submit">Send message</button>
+              <span id="formStatus" class="chip" aria-live="polite"></span>
+            </div>
+          </form>
+          <aside class="card">
+            <h3>Elsewhere</h3>
+            <p>Email: <a href="mailto:sukriti.ganti.12@gmail.com">sukriti.ganti.12@gmail.com</a><br/>
+              GitHub: <a href="#">github.com/sukriti-ganti</a><br/>
+              LinkedIn: <a href="#">linkedin.com/in/sukriti</a>
+            </p>
+            <p class="chip">Resume available on request</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Sukriti — Built with curiosity. <span class="brand-gradient">ECE × R&D</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
