@@ -39,102 +39,82 @@ document.querySelectorAll('.nav .links a').forEach(a => {
 const PROJECTS = [
   {
     badge: "FPGA · Intern",
-    tags: "fpga hardware",
-    title: "Systolic FIR Filter Architecture",
-    desc: "Systolic array FIR implementation on PolarFire FPGA — fanout-independent fmax scaling, DSP block utilization, timing closure in Libero SoC / SmartTime.",
-    chips: ["Verilog", "Libero SoC", "Synplify", "SmartTime"],
-    linkText: "GitHub ↗",
-    linkHref: "https://github.com/sukriti-g",
-    img: ""
-  },
-  {
-    badge: "FPGA · DSP",
     tags: "fpga wireless hardware",
-    title: "Polyphase Decimating FIR (DDC)",
-    desc: "Polyphase decomposition-based DDC building block; Python bit-true reference model validated against RTL via AXI4-Stream testbench in ModelSim.",
-    chips: ["Verilog", "Python", "AXI4-Stream", "ModelSim"],
+    title: "81-tap Folded Systolic FIR Filter",
+    desc: "5G NR O-RAN channelizing FIR on PolarFire (MPF050T-1FCSG325E). Symmetric + multi-clock folding: 81 DSP blocks → 5. 300 MHz clock / 30 MSPS. All 161 ModelSim outputs matched MATLAB & hand-calculated golden reference.",
+    chips: ["Verilog", "Libero SoC", "Synplify", "ModelSim", "SmartTime"],
     linkText: "GitHub ↗",
-    linkHref: "https://github.com/sukriti-g",
+    linkHref: "https://github.com/sukriti-ganti/wireless-fpga-microchip",
     img: ""
   },
   {
-    badge: "Wireless · 5G",
-    tags: "wireless ai",
-    title: "Wireless Channel Simulator",
-    desc: "Rayleigh/Rician fading, path loss models (Free Space, log-distance), and multipath delay spread — built in Python/MATLAB for Sem 4 Wireless Comms (Rappaport).",
-    chips: ["Python", "MATLAB", "Rappaport", "OFDM"],
-    linkText: "Repo ↗",
-    linkHref: "https://github.com/sukriti-g",
-    img: ""
-  },
-  {
-    badge: "Smart Helmet",
-    tags: "hardware embedded",
-    title: "Smart Helmet for Mining Safety",
-    desc: "Gas & impact sensing with STM32 → PC serial telemetry; sensor filtering and alert logic. EPICS lead project.",
-    chips: ["STM32", "Serial", "C", "Sensors"],
+    badge: "FPGA · Ongoing",
+    tags: "fpga hardware",
+    title: "Generic FIR IP Block",
+    desc: "Fully parametric FIR IP: any tap count, any clock/data-rate ratio, static (.mem) or runtime-reloadable shadow-buffer coefficients. Generic clock-enable gen, write pointer, sample buffer — eliminates all 81-tap hardcoding.",
+    chips: ["Verilog", "Libero SoC", "Parametric RTL", "Shadow RAM"],
     linkText: "GitHub ↗",
-    linkHref: "https://github.com/sukriti-g",
-    img: ""
-  },
-  {
-    badge: "Digital Comms",
-    tags: "wireless ai",
-    title: "Digital Communication Systems Simulator",
-    desc: "PCM quantization noise, matched filter detection, BER curves for ASK/PSK/FSK/QAM, eye diagrams, and Huffman coding — Sem 4 DC course (Lathi & Ding).",
-    chips: ["Python", "MATLAB", "BER", "QAM"],
-    linkText: "Repo ↗",
-    linkHref: "https://github.com/sukriti-g",
+    linkHref: "https://github.com/sukriti-ganti/wireless-fpga-microchip",
     img: ""
   },
   {
     badge: "VLSI",
-    tags: "hardware fpga",
-    title: "CMOS VLSI Design Labs",
-    desc: "CMOS inverter static/dynamic characterization, NAND/NOR stick diagrams, SRAM cell layout, setup/hold timing analysis — Sem 4 VLSI (Weste & Harris).",
-    chips: ["CMOS", "LTspice", "Layout", "SRAM"],
-    linkText: "Repo ↗",
-    linkHref: "https://github.com/sukriti-g",
-    img: ""
-  },
-  {
-    badge: "Silent SOS",
-    tags: "hardware embedded",
-    title: "Silent SOS (ESP32 + GSM/GPS)",
-    desc: "Emergency wearable with MQTT/FCM fallback; power-aware firmware for field deployment.",
-    chips: ["ESP32", "GSM/GPS", "LoRa/MQTT"],
+    tags: "hardware",
+    title: "Static Noise Margin Analysis — SRAM Cells",
+    desc: "Characterization of 6T SRAM static noise margin under PVT variations. CMOS circuit analysis and SPICE simulation to determine read/write SNM stability bounds.",
+    chips: ["CMOS", "SPICE", "SRAM", "SNM"],
     linkText: "GitHub ↗",
-    linkHref: "https://github.com/sukriti-g",
+    linkHref: "https://github.com/sukriti-ganti/Analysis-of-Static-Noise-Margin-in-SRAM-cells",
     img: ""
   },
   {
-    badge: "ML/AI",
+    badge: "AI · Networks",
     tags: "ai",
-    title: "MLPP Lab Projects",
-    desc: "End-to-end ML pipeline: logistic regression, SVM, k-NN, Decision Tree, Random Forest, ANN/CNN on MNIST/CIFAR-10, RNN/LSTM for time-series — Sem 4 (Keras, Scikit-learn).",
-    chips: ["Python", "Keras", "Scikit-learn", "CNN"],
-    linkText: "Repo ↗",
-    linkHref: "https://github.com/sukriti-g",
+    title: "MSC Performance Analysis & Traffic Anomaly Detection",
+    desc: "ML pipeline for network traffic anomaly detection: feature engineering, multi-class classification, and performance benchmarking across real traffic datasets.",
+    chips: ["Python", "Scikit-learn", "Anomaly Detection", "Classification"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-ganti/MSC-Performance-Analysis-and-Traffic-Anomaly-Detection",
     img: ""
   },
   {
-    badge: "Vision",
-    tags: "ai hardware",
-    title: "MicroSense AI",
-    desc: "Microplastic detection on Raspberry Pi using classical ML pipeline.",
-    chips: ["Raspberry Pi", "CV/ML", "Python"],
-    linkText: "Repo ↗",
-    linkHref: "https://github.com/sukriti-g",
+    badge: "AI · CRM",
+    tags: "ai",
+    title: "Lead Conversion & Funnel Prediction System",
+    desc: "End-to-end ML system for predicting lead conversion probability and funnel drop-off using logistic regression, decision trees, and ensemble classifiers.",
+    chips: ["Python", "Scikit-learn", "Logistic Regression", "Ensemble"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-ganti/Lead_Conversion_And_Funnel_Prediction_System",
     img: ""
   },
   {
-    badge: "Protocol",
-    tags: "wireless hardware",
-    title: "MineNet Protocol",
-    desc: "Ultra-light telemetry protocol resilient to noisy RF links.",
-    chips: ["LoRa", "CRC", "FSM"],
-    linkText: "Spec ↗",
-    linkHref: "https://github.com/sukriti-g",
+    badge: "RVSP",
+    tags: "ai",
+    title: "Custom Optimizer Using Random Variables",
+    desc: "Stochastic optimizer built from scratch with PSD-guided step adaptation and noise-aware gradient updates — grounded in Random Variables & Stochastic Processes theory.",
+    chips: ["Python", "PSD", "Stochastic", "Optimization"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-ganti/Custom_Optimizer_Using_Random_Variables",
+    img: ""
+  },
+  {
+    badge: "IoT · Hardware",
+    tags: "hardware",
+    title: "Gas Detection & Alert System",
+    desc: "MQ-2 based gas leak detection system with cloud telemetry (HiveMQ), automated fan actuation, and real-time dashboard alerts.",
+    chips: ["Raspberry Pi", "MQ-2", "HiveMQ", "IoT"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-ganti/Gas-detection-and-alert-system",
+    img: ""
+  },
+  {
+    badge: "AI Agent",
+    tags: "ai",
+    title: "SpectroAgent",
+    desc: "AI-powered agent for automated spectral analysis and signal characterization.",
+    chips: ["Python", "AI Agent", "Signal Analysis"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-ganti/SpectroAgent",
     img: ""
   }
 ];
@@ -201,8 +181,7 @@ form?.addEventListener('submit', (e)=>{
 // ----- RESUME LINK -----
 document.getElementById('downloadResume')?.addEventListener('click', (e)=>{
   e.preventDefault();
-  // Replace with your file:
-  // window.location.href = 'resume.pdf';
+  // Replace with: window.location.href = 'resume.pdf';
   alert('Hook up your resume.pdf link here.');
 });
 
