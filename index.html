@@ -18,6 +18,7 @@
       <nav class="links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
         <a href="#projects">Projects</a>
         <a href="#timeline">Timeline</a>
         <a href="#contact">Contact</a>
@@ -38,9 +39,9 @@
         <div class="chip">ECE • FPGA • 5G/6G Wireless • DSP • Signal Processing</div>
         <h1 class="title">Building <span class="brand-gradient">silicon-accurate</span> wireless & DSP systems.</h1>
         <p>
-          I'm <strong>Sukriti</strong>, a B.Tech ECE undergrad at KL University (5G/6G specialization) and
-          Engineering Intern at <strong>Microchip Technology</strong>'s FPGA Business Unit —
-          working on O-RAN, PolarFire FPGA pipelines, and DSP IP development.
+          I'm <strong>Sukriti</strong>, a B.Tech ECE undergrad at KL University (5G/6G specialization)
+          and Engineering Intern at <strong>Microchip Technology</strong>'s FPGA Business Unit —
+          working on 5G NR O-RAN FIR filter pipelines and parametric DSP IP development on PolarFire.
         </p>
         <div style="display:flex;gap:10px;margin-top:16px">
           <a class="btn brand" href="#projects">Explore Projects</a>
@@ -49,7 +50,7 @@
         <div class="kpis">
           <div class="k"><div class="n">9.71</div><div class="t">CGPA (after Sem 4)</div></div>
           <div class="k"><div class="n">5G/6G</div><div class="t">Wireless Specialization</div></div>
-          <div class="k"><div class="n">FPGA</div><div class="t">Microchip Internship</div></div>
+          <div class="k"><div class="n">FPGA</div><div class="t">Microchip Technology Intern</div></div>
         </div>
       </div>
       <div class="hero-card">
@@ -73,15 +74,16 @@
             <h3>Who am I?</h3>
             <p>
               An ECE undergrad specializing in <em>5G/6G Wireless Technologies</em>, bridging theory and
-              silicon through hands-on FPGA engineering. I work at
-              <span class="brand-gradient">Microchip Technology</span>'s FPGA Business Unit on PolarFire FPGA
-              development — building RTL pipelines, verifying against Python bit-true models, and
-              navigating AXI handshaking, DSP block utilization, and timing closure.
+              silicon through hands-on FPGA engineering. At
+              <span class="brand-gradient">Microchip Technology</span>'s FPGA Business Unit I've
+              implemented an 81-tap folded systolic FIR filter for 5G NR O-RAN channelization on PolarFire,
+              and I'm currently building a fully parametric Generic FIR IP Block — any tap count,
+              any clock/data rate, static or runtime-reloadable coefficients.
             </p>
             <ul>
               <li>📡 <strong>Wireless & O-RAN:</strong> propagation, fading, cellular architecture, 5G/NR</li>
               <li>🔧 <strong>FPGA Engineering:</strong> Libero SoC, Synplify, SmartTime, AXI4/AXI4-Stream</li>
-              <li>🧮 <strong>DSP & Filtering:</strong> polyphase decomposition, FIR/IIR, FFT, PSD</li>
+              <li>🧮 <strong>DSP & Filtering:</strong> symmetric folding, polyphase decomposition, FFT, PSD</li>
               <li>💻 <strong>Software:</strong> Python (bit-true models), MATLAB, Verilog/VHDL RTL</li>
             </ul>
           </article>
@@ -90,9 +92,9 @@
             <ul style="margin:0;padding-left:18px">
               <li>Intern: <em>Microchip Technology — FPGA Business Unit</em></li>
               <li>FPGA stack: PolarFire, Libero SoC, Synplify, SmartTime, ModelSim</li>
-              <li>Tooling: Verilog/VHDL, Python (NumPy), MATLAB, AXI4/AXI4-Stream</li>
-              <li>Batch: 2024–2028 | CGPA: 9.71 (Sem 4)</li>
-              <li>Soft skills: technical writing, team coordination</li>
+              <li>Tooling: Verilog/VHDL, Python (NumPy), MATLAB</li>
+              <li>Batch: 2024–2028 &nbsp;|&nbsp; CGPA: 9.71 (Sem 4)</li>
+              <li>HES Pitch Finalists &nbsp;·&nbsp; DoT 5G Hackathon Regionalists</li>
             </ul>
             <div style="display:flex;gap:10px;margin-top:12px">
               <a class="btn" href="#timeline">Academic Journey →</a>
@@ -126,7 +128,7 @@
           <div class="card">
             <h3>Wireless & DSP</h3>
             <div class="skill-list">
-              <span class="chip">5G / O-RAN</span>
+              <span class="chip">5G NR / O-RAN</span>
               <span class="chip">Rayleigh / Rician fading</span>
               <span class="chip">Polyphase FIR</span>
               <span class="chip">FFT · PSD</span>
@@ -147,17 +149,42 @@
             </div>
           </div>
         </div>
-        <!-- Courses row -->
-        <div class="card" style="margin-top:18px">
-          <h3 style="margin:0 0 12px">Semester 4 Courses <span class="chip" style="font-size:.8rem;font-weight:400">2025–2026 Even Sem</span></h3>
-          <div class="skill-list">
-            <span class="chip">Digital Communication (24EC2208)</span>
-            <span class="chip">VLSI Design (24EC2211)</span>
-            <span class="chip">EM Waves & Transmission Lines (24EC2209)</span>
-            <span class="chip">Network Protocols & Security (24EC2210)</span>
-            <span class="chip">Wireless Communications (24EC2226F)</span>
-            <span class="chip">ML with Python (24SDEC02)</span>
-            <span class="chip">Design & Analysis of Algorithms (24CS2203HF)</span>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <h2>Achievements</h2>
+          <span class="chip">Beyond the classroom</span>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+          <div class="card achieve">
+            <div class="achieve-icon">🏆</div>
+            <h3>HES Pitch Competition</h3>
+            <span class="chip achieve-badge">Finalists</span>
+            <p style="color:var(--muted);margin-top:10px;font-size:.95rem">
+              Selected as finalists in the HES entrepreneurship and innovation pitch competition,
+              representing ECE technology solutions.
+            </p>
+          </div>
+          <div class="card achieve">
+            <div class="achieve-icon">📡</div>
+            <h3>5G Hackathon — DoT</h3>
+            <span class="chip achieve-badge">Regionalists</span>
+            <p style="color:var(--muted);margin-top:10px;font-size:.95rem">
+              Qualified as regionalists in the Department of Telecommunications 5G Hackathon
+              at IIT Tirupati — competing in next-gen wireless innovation.
+            </p>
+          </div>
+          <div class="card achieve">
+            <div class="achieve-icon">🎓</div>
+            <h3>IIT Tirupati</h3>
+            <span class="chip achieve-badge">Research Visit</span>
+            <p style="color:var(--muted);margin-top:10px;font-size:.95rem">
+              [Add your IIT Tirupati description here — workshop, research program, or collaboration details.]
+            </p>
           </div>
         </div>
       </div>
@@ -191,27 +218,39 @@
           <div class="timeline">
             <div class="t-item">
               <h4>2024 — Joined KL University, B.Tech ECE</h4>
-              <p>Commenced 5G/6G Wireless Technologies specialization. Batch 2024–2028.</p>
+              <p>5G/6G Wireless Technologies specialization. Batch 2024–2028.</p>
             </div>
             <div class="t-item">
-              <h4>2025 (Sem 3) — Core ECE Foundations</h4>
+              <h4>Sem 3 — Core ECE Foundations</h4>
               <p>Processors &amp; Controllers, Signals &amp; Systems, Analog electronics — first deep hardware–software integration.</p>
             </div>
             <div class="t-item">
-              <h4>2025 (Sem 4) — Advanced Comms &amp; VLSI</h4>
-              <p>Digital Communication (Lathi &amp; Ding), VLSI Design (Weste &amp; Harris), EMTL, Wireless Comms (Rappaport), NPS, MLPP — CGPA: <strong>9.71</strong>.</p>
+              <h4>Sem 4 — Advanced Comms, VLSI &amp; Wireless · CGPA 9.71</h4>
+              <p>Digital Communication (Lathi &amp; Ding), VLSI Design (Weste &amp; Harris), EMTL, Wireless Comms (Rappaport), NPS, MLPP, DAA.</p>
+            </div>
+            <div class="t-item">
+              <h4>2025 — HES Pitch Competition — Finalists</h4>
+              <p>Selected as finalists for ECE innovation pitching.</p>
+            </div>
+            <div class="t-item">
+              <h4>2025 — 5G Hackathon by DoT @ IIT Tirupati — Regionalists</h4>
+              <p>Qualified as regionalists in the Department of Telecommunications 5G Hackathon, IIT Tirupati.</p>
             </div>
             <div class="t-item">
               <h4>2025 — Engineering Intern · Microchip Technology (FPGA BU)</h4>
-              <p>PolarFire FPGA development: DSP IP pipelines, O-RAN integration, AXI4-Stream handshaking, timing closure in Libero SoC / Synplify / SmartTime.</p>
+              <p>PolarFire FPGA: 5G NR O-RAN DSP IP development, Libero SoC / Synplify / SmartTime / ModelSim design flow.</p>
             </div>
             <div class="t-item">
-              <h4>2025 — Systolic FIR &amp; Polyphase DDC</h4>
-              <p>Internship FPGA projects: systolic FIR architecture (fanout-independent fmax scaling), polyphase decimating FIR as DDC building block.</p>
+              <h4>Internship — 81-tap Folded Systolic FIR Filter ✓</h4>
+              <p>Symmetric + multi-clock folding: 81 DSP blocks → 5. 300 MHz / 30 MSPS. All 161 ModelSim outputs matched golden reference exactly.</p>
             </div>
             <div class="t-item">
-              <h4>2025 (Sem 5) — In Progress</h4>
-              <p>DTSP, Radio Wave Propagation, 4G/LTE Wireless Technologies, 4G-LTE Communication Systems (SDC).</p>
+              <h4>Internship — Generic FIR IP Block (In Progress)</h4>
+              <p>Fully parametric IP: any tap count, any clock/data rate, static or reload-shadow coefficients — no hardcoded assumptions.</p>
+            </div>
+            <div class="t-item">
+              <h4>Sem 5 — In Progress</h4>
+              <p>DTSP, Radio Wave Propagation, 4G Wireless Technologies, 4G-LTE Communication Systems (SDC).</p>
             </div>
           </div>
         </div>
@@ -238,7 +277,7 @@
           <aside class="card">
             <h3>Elsewhere</h3>
             <p>Email: <a href="mailto:sukriti@example.com">sukriti@example.com</a><br/>
-              GitHub: <a href="#">github.com/sukriti-g</a><br/>
+              GitHub: <a href="https://github.com/sukriti-ganti" target="_blank" rel="noreferrer">github.com/sukriti-ganti</a><br/>
               LinkedIn: <a href="#">linkedin.com/in/sukriti</a>
             </p>
             <p class="chip">Resume available on request</p>
