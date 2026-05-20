@@ -35,76 +35,86 @@ document.querySelectorAll('.nav .links a').forEach(a => {
   });
 });
 
-// ----- PROJECT DATA (EDIT HERE to add projects) -----
+// ----- PROJECT DATA -----
 const PROJECTS = [
+  {
+    badge: "FPGA · Intern",
+    tags: "fpga hardware",
+    title: "Systolic FIR Filter Architecture",
+    desc: "Systolic array FIR implementation on PolarFire FPGA — fanout-independent fmax scaling, DSP block utilization, timing closure in Libero SoC / SmartTime.",
+    chips: ["Verilog", "Libero SoC", "Synplify", "SmartTime"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-g",
+    img: ""
+  },
+  {
+    badge: "FPGA · DSP",
+    tags: "fpga wireless hardware",
+    title: "Polyphase Decimating FIR (DDC)",
+    desc: "Polyphase decomposition-based DDC building block; Python bit-true reference model validated against RTL via AXI4-Stream testbench in ModelSim.",
+    chips: ["Verilog", "Python", "AXI4-Stream", "ModelSim"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-g",
+    img: ""
+  },
+  {
+    badge: "Wireless · 5G",
+    tags: "wireless ai",
+    title: "Wireless Channel Simulator",
+    desc: "Rayleigh/Rician fading, path loss models (Free Space, log-distance), and multipath delay spread — built in Python/MATLAB for Sem 4 Wireless Comms (Rappaport).",
+    chips: ["Python", "MATLAB", "Rappaport", "OFDM"],
+    linkText: "Repo ↗",
+    linkHref: "https://github.com/sukriti-g",
+    img: ""
+  },
   {
     badge: "Smart Helmet",
     tags: "hardware embedded",
     title: "Smart Helmet for Mining Safety",
-    desc: "Gas & impact sensing with STM32 → PC serial; filtering and alert logic.",
-    chips: ["SCS","P&C","STM32","Serial"],
+    desc: "Gas & impact sensing with STM32 → PC serial telemetry; sensor filtering and alert logic. EPICS lead project.",
+    chips: ["STM32", "Serial", "C", "Sensors"],
     linkText: "GitHub ↗",
-    linkHref: "https://github.com/yourname/smart-helmet",
-    img: "" // optional image URL
+    linkHref: "https://github.com/sukriti-g",
+    img: ""
+  },
+  {
+    badge: "Digital Comms",
+    tags: "wireless ai",
+    title: "Digital Communication Systems Simulator",
+    desc: "PCM quantization noise, matched filter detection, BER curves for ASK/PSK/FSK/QAM, eye diagrams, and Huffman coding — Sem 4 DC course (Lathi & Ding).",
+    chips: ["Python", "MATLAB", "BER", "QAM"],
+    linkText: "Repo ↗",
+    linkHref: "https://github.com/sukriti-g",
+    img: ""
+  },
+  {
+    badge: "VLSI",
+    tags: "hardware fpga",
+    title: "CMOS VLSI Design Labs",
+    desc: "CMOS inverter static/dynamic characterization, NAND/NOR stick diagrams, SRAM cell layout, setup/hold timing analysis — Sem 4 VLSI (Weste & Harris).",
+    chips: ["CMOS", "LTspice", "Layout", "SRAM"],
+    linkText: "Repo ↗",
+    linkHref: "https://github.com/sukriti-g",
+    img: ""
   },
   {
     badge: "Silent SOS",
-    tags: "hardware embedded ai",
-    title: "Silent SOS (ESP32 + GSM/GPS)",
-    desc: "Emergency wearable with MQTT/FCM fallback; power-aware firmware.",
-    chips: ["ESP32","GSM/GPS","LoRa/MQTT"],
-    linkText: "GitHub ↗",
-    linkHref: "https://github.com/yourname/silent-sos",
-    img: ""
-  },
-  {
-    badge: "AECD",
-    tags: "hardware ai",
-    title: "Analog McCulloch–Pitts Neuron",
-    desc: "Op-amp threshold neuron; bias/saturation control and noise analysis.",
-    chips: ["Op-amp","SPICE","Bias/Noise"],
-    linkText: "Paper ↗",
-    linkHref: "https://your-link-to-paper",
-    img: ""
-  },
-  {
-    badge: "RVSP",
-    tags: "ai",
-    title: "Stochastic Optimizer (RVSP)",
-    desc: "Custom optimizer with PSD-guided step adaptation; noise-aware updates.",
-    chips: ["Python","PSD","Stochastic"],
-    linkText: "Repo ↗",
-    linkHref: "https://github.com/yourname/stochastic-optimizer",
-    img: ""
-  },
-  {
-    badge: "ESD",
     tags: "hardware embedded",
-    title: "Gas Leak Detection (Pi + HiveMQ)",
-    desc: "MQ-2 + cloud telemetry + fan actuation; dashboard alerts; PCB prototype.",
-    chips: ["Raspberry Pi","HiveMQ","PCB"],
-    linkText: "Docs ↗",
-    linkHref: "https://your-link-to-docs",
+    title: "Silent SOS (ESP32 + GSM/GPS)",
+    desc: "Emergency wearable with MQTT/FCM fallback; power-aware firmware for field deployment.",
+    chips: ["ESP32", "GSM/GPS", "LoRa/MQTT"],
+    linkText: "GitHub ↗",
+    linkHref: "https://github.com/sukriti-g",
     img: ""
   },
   {
-    badge: "ROS2",
-    tags: "ai embedded",
-    title: "Warehouse Explore (ROS2)",
-    desc: "Exploration node with path planning; validated in Foxglove.",
-    chips: ["ROS2","Python","Nav"],
+    badge: "ML/AI",
+    tags: "ai",
+    title: "MLPP Lab Projects",
+    desc: "End-to-end ML pipeline: logistic regression, SVM, k-NN, Decision Tree, Random Forest, ANN/CNN on MNIST/CIFAR-10, RNN/LSTM for time-series — Sem 4 (Keras, Scikit-learn).",
+    chips: ["Python", "Keras", "Scikit-learn", "CNN"],
     linkText: "Repo ↗",
-    linkHref: "https://github.com/yourname/warehouse-explore",
-    img: ""
-  },
-  {
-    badge: "Protocol",
-    tags: "embedded hardware",
-    title: "MineNet Protocol",
-    desc: "Ultra-light telemetry protocol resilient to noisy RF links.",
-    chips: ["LoRa","CRC","FSM"],
-    linkText: "Spec ↗",
-    linkHref: "https://your-link-to-spec",
+    linkHref: "https://github.com/sukriti-g",
     img: ""
   },
   {
@@ -112,19 +122,19 @@ const PROJECTS = [
     tags: "ai hardware",
     title: "MicroSense AI",
     desc: "Microplastic detection on Raspberry Pi using classical ML pipeline.",
-    chips: ["Raspberry Pi","CV/ML","Python"],
+    chips: ["Raspberry Pi", "CV/ML", "Python"],
     linkText: "Repo ↗",
-    linkHref: "https://github.com/yourname/microsense-ai",
+    linkHref: "https://github.com/sukriti-g",
     img: ""
   },
   {
-    badge: "P&C",
-    tags: "embedded",
-    title: "8051 & 8086 Labs",
-    desc: "ALP exercises: arrays, timers, interrupts, ADC/DAC interfacing.",
-    chips: ["MCU 8051 IDE","Keil","Assembly"],
-    linkText: "Code ↗",
-    linkHref: "https://github.com/yourname/pc-labs",
+    badge: "Protocol",
+    tags: "wireless hardware",
+    title: "MineNet Protocol",
+    desc: "Ultra-light telemetry protocol resilient to noisy RF links.",
+    chips: ["LoRa", "CRC", "FSM"],
+    linkText: "Spec ↗",
+    linkHref: "https://github.com/sukriti-g",
     img: ""
   }
 ];
